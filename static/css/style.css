@@ -1,0 +1,224 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#f4f6f9;
+}
+
+/* HEADER */
+
+header{
+    background:#1e40af;
+    color:white;
+    padding:20px 50px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-size:24px;
+    font-weight:bold;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:20px;
+    font-weight:bold;
+}
+
+nav a:hover{
+    color:#93c5fd;
+}
+
+/* HERO */
+
+.hero{
+    text-align:center;
+    padding:100px 20px;
+}
+
+.hero h1{
+    font-size:55px;
+    color:#1e3a8a;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:22px;
+    margin-bottom:30px;
+    color:#555;
+}
+
+/* BOTÓN */
+
+.btn{
+    background:#2563eb;
+    color:white;
+    padding:15px 30px;
+    text-decoration:none;
+    border-radius:10px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#1d4ed8;
+}
+
+/* SECCIONES */
+
+section{
+    width:100%;
+}
+
+.services{
+    max-width:1200px;
+    margin:auto;
+    padding:60px 20px;
+}
+
+.services h2{
+    text-align:center;
+    margin-bottom:40px;
+    color:#1e3a8a;
+    font-size:35px;
+}
+
+.services p{
+    line-height:1.6;
+}
+
+/* TARJETAS */
+
+.cards{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.card{
+    background:white;
+    width:280px;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card h3{
+    color:#2563eb;
+    margin-bottom:10px;
+}
+
+/* CONTADOR */
+
+.counter{
+    background:#1e40af;
+    color:white;
+    text-align:center;
+    padding:50px;
+}
+
+.counter h2{
+    font-size:50px;
+    margin-bottom:10px;
+}
+
+/* FOOTER */
+
+footer{
+    background:#111827;
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:0px;
+}
+
+.card{
+    min-height:220px;
+}
+
+.card p{
+    margin-top:10px;
+    color:#555;
+}
+
+/* CONTACTO */
+
+.contact-section{
+    display:flex;
+    justify-content:center;
+    padding:50px 20px;
+}
+
+.contact-form{
+    background:white;
+    width:100%;
+    max-width:700px;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.1);
+}
+
+.contact-form label{
+    display:block;
+    margin-top:15px;
+    margin-bottom:5px;
+    font-weight:bold;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea{
+    width:100%;
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    font-size:16px;
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus{
+    outline:none;
+    border-color:#2563eb;
+}
+
+.contact-form button{
+    margin-top:20px;
+    border:none;
+    cursor:pointer;
+    width:100%;
+}
+
+#contadorMensaje{
+    display:block;
+    margin-top:8px;
+    color:#666;
+}
+
+#errorNombre,
+#errorTelefono,
+#errorMensaje{
+    color:red;
+    font-size:14px;
+    display:block;
+    margin-top:5px;
+}
+
+#contadorMensaje{
+    display:block;
+    margin-top:5px;
+    color:#666;
+}

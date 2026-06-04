@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>TechSupport Cloud</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">
+        TECHSUPPORT CLOUD
+    </div>
+
+    <nav>
+        <a href="/">Inicio</a>
+        <a href="/nosotros">Nosotros</a>
+        <a href="/servicios">Servicios</a>
+        <a href="/contacto">Contacto</a>
+    </nav>
+
+</header>
+
+<section class="hero">
+
+    <h1>¿Tu computadora está lenta?</h1>
+
+    <p>
+        Solicita un diagnóstico gratuito
+    </p>
+
+    <a href="/contacto" class="btn">
+        Solicitar Soporte
+    </a>
+
+</section>
+
+<section class="services">
+
+    <h2>Nuestros Servicios</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>💻 Mantenimiento</h3>
+            <p>Optimización y limpieza de equipos.</p>
+        </div>
+
+        <div class="card">
+            <h3>🔧 Reparación</h3>
+            <p>Diagnóstico y reparación de laptops.</p>
+        </div>
+
+        <div class="card">
+            <h3>🌐 Redes</h3>
+            <p>Configuración de redes domésticas.</p>
+        </div>
+
+        <div class="card">
+            <h3>📡 Soporte Remoto</h3>
+            <p>Asistencia técnica en línea.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="counter">
+
+    <h2 id="clientes">0</h2>
+
+    <p>Clientes Atendidos</p>
+
+</section>
+
+<script src="{{ url_for('static', filename='js/contador.js') }}"></script>
+
+<footer>
+    <p>© 2026 TechSupport Cloud - Todos los derechos reservados</p>
+</footer>
+
+</body>
+
+</html>

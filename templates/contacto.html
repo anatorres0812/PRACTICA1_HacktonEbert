@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - TechSupport Cloud</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">
+        TECHSUPPORT CLOUD
+    </div>
+
+    <nav>
+        <a href="/">Inicio</a>
+        <a href="/nosotros">Nosotros</a>
+        <a href="/servicios">Servicios</a>
+        <a href="/contacto">Contacto</a>
+    </nav>
+
+</header>
+
+<section class="hero">
+
+    <h1>Contáctanos</h1>
+
+    <p>
+        Solicita soporte técnico y nos comunicaremos contigo lo antes posible.
+    </p>
+
+</section>
+
+<section class="contact-section">
+
+    <form class="contact-form">
+
+        <label>Nombre Completo</label>
+
+        <input
+            type="text"
+            id="nombre"
+            name="nombre"
+            required
+            placeholder="Ana Torres">
+
+        <small id="errorNombre"></small>
+
+        <label>Correo Electrónico</label>
+
+        <input
+            type="email"
+            id="correo"
+            name="correo"
+            required
+            placeholder="ejemplo@correo.com">
+
+        <label>Teléfono</label>
+
+        <input
+            type="tel"
+            id="telefono"
+            name="telefono"
+            required
+            placeholder="987654321">
+
+        <small id="errorTelefono"></small>
+
+        <label>Servicio</label>
+
+        <select name="servicio" required>
+
+            <option value="">
+                Seleccione un servicio
+            </option>
+
+            <option>Mantenimiento Preventivo</option>
+            <option>Reparación de Laptops</option>
+            <option>Instalación de Software</option>
+            <option>Soporte Remoto</option>
+            <option>Configuración de Redes</option>
+            <option>Diagnóstico Técnico</option>
+
+        </select>
+
+        <label>Mensaje</label>
+
+        <textarea
+            id="mensaje"
+            name="mensaje"
+            rows="5"
+            maxlength="300"
+            required
+            placeholder="Describe tu problema o consulta..."
+        ></textarea>
+
+        <small id="contadorMensaje">
+            0 / 300 caracteres
+        </small>
+
+        <small id="errorMensaje"></small>
+
+        <button type="submit" class="btn">
+            Enviar Solicitud
+        </button>
+
+    </form>
+
+</section>
+
+<footer>
+    © 2026 TechSupport Cloud - Todos los derechos reservados
+</footer>
+
+<script>
+
+const nombre = document.getElementById("nombre");
+const telefono = document.getElementById("telefono");
+const mensaje = document.getElementById("mensaje");
+
+const errorNombre = document.getElementById("errorNombre");
+const errorTelefono = document.getElementById("errorTelefono");
+const errorMensaje = document.getElementById("errorMensaje");
+const contador = document.getElementById("contadorMensaje");
+
+/* VALIDACIÓN NOMBRE */
+
+nombre.addEventListener("input", () => {
+
+    const regex =
+    /^([A-ZÁÉÍÓÚÑ][a-záéíóúñ]+)(\s[A-ZÁÉÍÓÚÑ][a-záéíóúñ]+)*$/;
+
+    if(nombre.value === ""){
+        errorNombre.textContent = "";
+    }
+    else if(!regex.test(nombre.value)){
+        errorNombre.textContent =
+        "Cada palabra debe iniciar con mayúscula.";
+    }
+    else{
+        errorNombre.textContent = "";
+    }
+
+});
+
+/* VALIDACIÓN TELÉFONO */
+
+telefono.addEventListener("input", () => {
+
+    const regex = /^9[0-9]{8}$/;
+
+    if(telefono.value === ""){
+        errorTelefono.textContent = "";
+    }
+    else if(!regex.test(telefono.value)){
+        errorTelefono.textContent =
+        "El número debe iniciar con 9 y tener 9 dígitos. Ejemplo: 987654321";
+    }
+    else{
+        errorTelefono.textContent = "";
+    }
+
+});
+
+/* VALIDACIÓN MENSAJE */
+
+mensaje.addEventListener("input", () => {
+
+    contador.textContent =
+    mensaje.value.length + " / 300 caracteres";
+
+    const regex =
+    /^[A-Za-zÁÉÍÓÚáéíóúÑñ0-9.,\s]*$/;
+
+    if(!regex.test(mensaje.value)){
+        errorMensaje.textContent =
+        "Solo letras, números, espacios, comas y puntos.";
+    }
+    else{
+        errorMensaje.textContent = "";
+    }
+
+});
+
+</script>
+
+</body>
+
+</html>
